@@ -32,3 +32,13 @@ print(conf_mat)
 
 print("Accuracy: %0.2f (+/- %0.2f)" % (scores.mean(), scores.std() * 2))
 
+plt.imshow(, cmap=plt.cm.Blues)
+plt.title("Confusion Matrix")
+plt.xlabel("Predicted labels")
+plt.ylabel("True labels")
+plt.xticks([], [])
+plt.yticks([], [])
+for i in range(cm.shape[0]):
+    for j in range(cm.shape[1]):
+        plt.text(j, i, cm[i, j], ha="center", va="center")
+plt.show()
