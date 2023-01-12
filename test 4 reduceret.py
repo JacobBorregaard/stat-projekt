@@ -49,7 +49,8 @@ for train_index, test_index in gkf.split(X1,y,groups=df["horse"]):
     decision_tree.fit(X_train, y_train)
 
     #baseline model
-    baseline = max(y_train)
+    unique, counts = np.unique(y_train, return_counts=True)
+    baseline = unique[np.argmax(counts)]
 
 
     #logistic regression prediction
