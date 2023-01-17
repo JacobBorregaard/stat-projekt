@@ -93,17 +93,17 @@ print(w_acc_d)
 
 
 #table for logistic versus decision tree model
-table1 = [[sum((true_pred1 == 1) & (true_pred11 == 1)), sum((true_pred1 == 0) & (true_pred11 == 1))],
-         [sum((true_pred1 == 1) & (true_pred11 == 0)), sum((true_pred1 == 0) & (true_pred11 == 0))]]
+table1 = [[sum((true_pred1 == 1) & (true_pred11 == 1)), sum((true_pred1 == 1) & (true_pred11 == 0))],
+         [sum((true_pred1 == 0) & (true_pred11 == 1)), sum((true_pred1 == 0) & (true_pred11 == 0))]]
 
 
 #table for baseline versus decision tree model
-table2 = [[sum((b_acc == 1) & (true_pred11 == 1)), sum((b_acc == 0) & (true_pred11 == 1))],
-         [sum((b_acc == 1) & (true_pred11 == 0)), sum((b_acc == 0) & (true_pred11 == 0))]]
+table2 = [[sum((b_acc == 1) & (true_pred11 == 1)), sum((b_acc == 1) & (true_pred11 == 0))],
+         [sum((b_acc == 0) & (true_pred11 == 1)), sum((b_acc == 0) & (true_pred11 == 0))]]
 
 #table for baseline versus decision tree model
-table3 = [[sum((b_acc == 1) & (true_pred1 == 1)), sum((b_acc == 0) & (true_pred1 == 1))],
-         [sum((b_acc == 1) & (true_pred1 == 0)), sum((b_acc == 0) & (true_pred1 == 0))]]
+table3 = [[sum((b_acc == 1) & (true_pred1 == 1)), sum((b_acc == 1) & (true_pred1 == 0))],
+         [sum((b_acc == 0) & (true_pred1 == 1)), sum((b_acc == 0) & (true_pred1 == 0))]]
 
 
 result1 = mcnemar(table1, exact=False)

@@ -34,8 +34,8 @@ total_acc1 = []
 total_acc11 = []
 true_pred = []
 b_acc = []
-
-
+none_count = []
+non_counter = 0
 # Loop through the indices of the samples
 for train_index, test_index in gkf.split(X1,y,groups=df["horse"]):
     # Get the training and test data
@@ -63,6 +63,8 @@ for train_index, test_index in gkf.split(X1,y,groups=df["horse"]):
     b_pred = (baseline == y_test) * 1
 
     true_pred = (y_pred == y_test)*1
+
+
 
     true_pred_d = (d_pred == y_test)*1
 
@@ -116,3 +118,4 @@ print('p-value for Mcnemar test between logistic and baseline model :', result3.
 
 
 
+print(none_counter)

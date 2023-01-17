@@ -52,6 +52,7 @@ for train_index, test_index in gkf.split(X1,y,groups=df["horse"]):
     #decision tree prediction
     d_pred = decision_tree.predict(X_test)
 
+    print(d_pred)
     #baseline_predicition
     b_pred = (baseline == y_test) * 1
 
